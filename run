@@ -1,0 +1,26 @@
+#!/bin/bash
+
+my_file="$PWD/aliases.txt"
+
+his_file="$PWD/history.txt"
+
+blueprint(){
+	local shortcut=$1
+	local full_command=$2
+	local history_file=$3
+    sed -i 's/"$shortcut"/"$full_command"/g' $history_file
+}
+
+while read -r line; do
+
+	part_1=$(cut -d= -f1 <<< "$line" | cut -d" " -f2)
+
+	part_2=$(cut -d= -f2 <<< "$line")
+
+	echo $part_1
+
+	echo $part_2
+
+    sed -i 's/"$part_1"/"$part_2"/g' $his_file
+
+done < "$my_file"
