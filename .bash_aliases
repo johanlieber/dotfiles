@@ -1,4 +1,5 @@
 #General shortcuts
+alias sl="ls"
 alias mkd="mkdir -pv"
 alias h="cd ~"
 alias his="history"
@@ -15,8 +16,12 @@ alias x="chmod +x"
 alias x-="chmod -x" 
 alias t="touch" 
 alias py3="python3"
+alias python="python3"
+alias pip="pip3"
 alias gs="git status"
 alias gpl="git pull"
+alias vrc="vim ~/.vimrc"
+alias nvrc="vim ~/.config/nvim/init.vim"
 
 #Change to apps: 
 #Lightdark App = ldapp, PEMS App = psapp
